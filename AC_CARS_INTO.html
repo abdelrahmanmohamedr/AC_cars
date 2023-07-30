@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<style>
+
+body{
+    background-color: #eee;
+}
+
+header{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    background-color: white;
+}
+
+
+header img{
+    height: 100%;
+}
+
+.mainp{
+    text-align: center;
+}
+
+.mainp p{
+    font-size: 30px;
+
+}
+
+input{
+    display: none;
+}
+
+label{
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 205px;
+}
+
+label.BMW{
+    margin-left: 310px;
+}
+
+label::selection{
+    background-color: white;
+}
+
+input[type = "checkbox"]:checked + label{
+    color: red;
+}
+
+.selection .DBMW,
+.selection .DMAR,
+.selection .DKIA,
+.selection .DTOY,
+.selection .DBYD{
+    display: none;
+    background-color: white;
+}
+
+input[type = "checkbox"]:checked + label{
+    color: red;
+}
+
+input[class = "BMW"]:checked ~ div[class = "DBMW"]{
+    display: block;
+}
+input[class = "MAR"]:checked ~ div[class = "DMAR"]{
+    display: block;
+}
+input[class = "KIA"]:checked ~ div[class = "DKIA"]{
+    display: block;
+}
+input[class = "TOY"]:checked ~ div[class = "DTOY"]{
+    display: block;
+}
+input[class = "BYD"]:checked ~ div[class = "DBYD"]{
+    display: block;
+}
+
+.BMWP{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 29px;
+    text-decoration: underline;
+}
+h3{
+    margin-left: 57px;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 10px;
+}
+.h310::before{
+    content: "10";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h39::before{
+    content: "9";
+    background-color: red;
+    padding: 8px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 26px;
+    color: white;
+}
+.h38::before{
+    content: "8";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h37::before{
+    content: "7";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h36::before{
+    content: "6";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h35::before{
+    content: "5";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h34::before{
+    content: "4";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h33::before{
+    content: "3";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h32::before{
+    content: "2";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+.h31::before{
+    content: "1";
+    background-color: red;
+    padding: 3px;
+    position: absolute;
+    left: -39px;
+    top: -1px;
+    height: 36px;
+    color: white;
+}
+
+div [class*= MAIN]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 10px;
+}
+
+.selection img{
+    width: 48%;
+    border: 0.1px solid transparent;
+    border-radius: 30px;
+}
+
+p[class*=p]{
+    flex-basis: 48%;
+    font-size: 25px;
+}
+
+a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width:1600px) {
+    label {
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 73px;
+}
+label.BMW{
+    margin-left: 0px;
+}
+    
+}
+
+</style>
+
+<body>
+    <header>
+        <img src="ac.png" alt="logo">
+    </header>
+
+    <section>
+
+        <div class="mainp">
+        <p>with <strong>AC</strong> website u can know the best cars for the last 5 years for many different car brands like BMW , marcedes , KIA , and many more. </p>
+        </div>
+
+        <hr>
+
+<div class="selection">
+            
+    <input type="checkbox" class="BMW" value="BMW" name="BMW" id="BMW">
+    <label for="BMW" class="BMW">BMW</label>
+
+    <input type="checkbox" class="MAR" value="MAR" name="MAR" id="MAR">
+    <label for="MAR" class="MAR">MAR</label>
+
+    <input type="checkbox" class="KIA" value="KIA" name="KIA" id="KIA">
+    <label for="KIA" class="KIA">KIA</label>
+    
+    <input type="checkbox" class="TOY" value="TOY" name="TOY" id="TOY">
+    <label for="TOY" class="TOY">TOY</label>
+    
+    <input type="checkbox" class="BYD" value="BYD" name="BYD" id="BYD">
+    <label for="BYD" class="BYD">BYD</label>
+        <hr>
+
+    <div class="DBMW">
+
+        <h2>BMW</h2>
+
+        <p class="BMWP"> BMW is one of those rare car companies whose vehicles serve as a powerful statement and status symbol. 
+        It has earned this reputation of brilliance and reliability through decades of providing some of the most desirable and robust models in automotive history.
+        <br> <br>
+        there is 10 of the best BMW cars of these decade:
+        </p>
+
+        <div class="bmw10">
+            <div class="BMW_X7">
+                <h3 class="h310">BMW X7</h3>
+                <div class="BMW_X7_MAIN">
+                    <img class="BMW_X7img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/X7.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW X7">
+                    <p class="BMW_X7p"> We had to wait until last year for BMW to unveil their answer to all those full-size SUVs such as the Audi Q7, Lincoln Navigator, or the G-Class. 
+                        Yet, the X7 was definitely worth the wait, 
+                        as the model now sits near the top of its segment, featuring some of the best luxury features paired with a powerful engine... <a href="">see more</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="BMW_M5_Competition">
+                <h3 class="h39">BMW M5 Competition</h3>
+                <div class="BMW_M5_Competition_MAIN">
+                    <img class="BMW_M5_Competitionimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/M5-Competition.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW M5 Competition">
+                    <p class="BMW_M5_Competitionp"> To make this incredible sports car, BMW took one of the greatest midsize sedans on the market -
+                         the 5-series - and fitted it with a beastly 4.4L V8 producing 617 horsepower. With such raw power coming from the engine, 
+                        it no longer connected to just the rear wheels but all four wheels instead... <a href="">see more</a>
+                    </p>
+                </div>
+            <div class="BMW_8-Series">
+                <h3 class="h38">BMW 8-Series</h3>
+                <div class="BMW_8-Series_MAIN">
+                    <img class="BMW_8-Seriesimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/8-series.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW 8-Series">
+                    <p class="BMW_8-Seriesp"> Hands down one of the best cars BMW delivered in the last decade,
+                        the majestic 8-Series is the long-awaited successor to the legendary 850CSI model discontinued in 1999.
+                        The car's performance, looks, and upscale experience made it one of the best grand tourers in the '90s,
+                        and we're ecstatic to say the new 8-Series is even better... <a href="">see more</a>
+                    </p>
+                </div>
+            <div class="BMW_Z4">
+                <h3 class="h37">BMW Z4</h3>
+                <div class="BMW_Z4_MAIN">
+                    <img class="BMW_Z4img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/Z4.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW Z4">
+                    <p class="BMW_Z4p"> The Z4 has been around for a while now, replacing the obsolete Z3 in 2002. The model paused production in 2016,
+                     offering up 335 horsepower under the hood at the time. However, the Z4's back for 2019 model year... <a href="">see more</a>
+                    </p>
+                </div>
+            <div class="BMW_i8">
+                <h3 class="h36">BMW i8</h3>
+                <div class="BMW_i8_MAIN">
+                    <img class="BMW_i8img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/i8.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW i8">
+                    <p class="BMW_i8p">As the brand's first hybrid supercar, the i8 denoted a shift in perspective for BMW when it debuted in 2014. Both in design and performance,
+                     the car draws inspiration from the legendary mid-engine BMW M1... <a href="">see more</a>
+                    </p>
+                </div>
+            <div class="BMW_1-Series_M_Coupe">
+                <h3 class="h35">BMW 1-Series M Coupe</h3>
+                <div class="BMW_1-Series_M_Coupe_MAIN">
+                    <img class="BMW_1-Series_M_Coupeimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/1-series-M-coupe.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW 1-Series M Coupe">
+                    <p class="BMW_1-Series_M_Coupep"> Launched in 2010, the 1-Series M Coupe was a promising start to the decade for BMW. This is the car nobody knew they wanted until BMW actually made it.
+                        It's essentially a high-performance model of their sub-compact 1-series... <a href="">see more</a>
+                    </p>
+                </div>
+            <div class="BMW_M3_E92">
+                <h3 class="h34">BMW M3 E92</h3>
+                <div class="BMW_M3_E92_MAIN">
+                    <img class="BMW_M3_E92img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/m3.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW M3 E92">
+                    <p class="BMW_M3_E92p"> It's difficult to find a car enthusiast that doesn't admire the simple brilliance and appeal of the M3.
+                     Pop culture made the E46 one of the most popular and desirable German sports cars in the world, and the E92 facelift only continued the trend.
+                     Aside from the exterior of a stylish sedan that suggests that this car might be more competent than it looks... <a href="">see more</a>
+                    </p>
+                </div>
+            <div class="BMW_4-Series">
+                <h3 class="h33">BMW 4-Series</h3>
+                <div class="BMW_4-Series_MAIN">
+                    <img class="BMW_4-Seriesimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/M4.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW 4-Series">
+                    <p class="BMW_4-Seriesp"> In 2013, BMW figured a sporty 3-Series coupe deserved to have its own line, and so the 4-series was born.
+                     And it was just one of the great ideas BMW would have the following decade.
+                     The car effectively competes against the likes of the Audi A5 and the Mercedes C-series coupe... <a href="">see more</a>
+                    </p>
+                </div>
+            <div class="BMW_X1">
+                <h3 class="h32">BMW X1</h3>
+                <div class="BMW_X1_MAIN">
+                    <img class="BMW_X1img" src="https://th.bing.com/th/id/R.f71063c6a1693b34470e821f6244642d?rik=%2bpNyd8EVUJH3fg&pid=ImgRaw&r=0" alt="BMW X1">
+                    <p class="BMW_X1p"> At a $35,000 starting price point, the X1 is the luxury SUV for those who want the BMW experience without the spaciousness of a larger SUV.
+                     And it manages to fill this gap perfectly, 
+                    currently sitting at the very top of the sub-compact luxury SUV segment. And it's been doing this since 2013.... <a href="">see more</a>
+                    </p>
+                </div>
+            <div class="BMW_7-Series">
+                <h3 class="h31">BMW 7-Series</h3>
+                <div class="BMW_7-Series_MAIN">
+                    <img class="BMW_7-Seriesimg" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/7-series.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW 7-Series">
+                    <p class="BMW_7-Seriesp"> The company's flagship super luxury sedan has kept its elite status for the entire past decade,
+                     competing with the greatest cars in its segment such as the Mercedes-Benz S class and Jaguar XJ,
+                     even giving land yachts like Bentley a run for their money.... <a href="">see more</a>
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>
+            
+        
+
+    </div>
+
+    <div class="DMAR">WADWDWAD</div>
+
+    <div class="DKIA">WADAWDWAD</div>
+
+    <div class="DTOY">WDAWADWADA</div>
+
+    <div class="DBYD">ASDSADADWA</div>
+        
+</div>
+
+
+    </section>
+</body>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<style>
+
+input{
+    display: none;
+}
+
+label{
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right:10px ;
+
+}
+
+div{
+    display: none;
+}
+
+label::selection{
+    background-color: white;
+}
+
+input[type = "checkbox"]:checked + label{
+    color: red;
+}
+
+input[class = "BMW"]:checked ~ div[class = "DBMW"]{
+    display: block;
+}
+input[class = "MAR"]:checked ~ div[class = "DMAR"]{
+    display: block;
+}
+input[class = "KIA"]:checked ~ div[class = "DKIA"]{
+    display: block;
+}
+input[class = "TOY"]:checked ~ div[class = "DTOY"]{
+    display: block;
+}
+input[class = "BYD"]:checked ~ div[class = "DBYD"]{
+    display: block;
+}
+
+</style>
+
+<body>
+    
+
+    <input type="checkbox" class="BMW" value="BMW" name="BMW" id="BMW">
+    <label for="BMW" class="BMW">BMW</label>
+
+    <input type="checkbox" class="MAR" value="MAR" name="MAR" id="MAR">
+    <label for="MAR" class="MAR">MAR</label>
+
+    <input type="checkbox" class="KIA" value="KIA" name="KIA" id="KIA">
+    <label for="KIA" class="KIA">KIA</label>
+    
+    <input type="checkbox" class="TOY" value="TOY" name="TOY" id="TOY">
+    <label for="TOY" class="TOY">TOY</label>
+    
+    <input type="checkbox" class="BYD" value="BYD" name="BYD" id="BYD">
+    <label for="BYD" class="BYD">BYD</label>
+
+
+<div class="DBMW">WADAWDWAD</div>
+
+<div class="DMAR">WADWDWAD</div>
+
+<div class="DKIA">WADAWDWAD</div>
+
+<div class="DTOY">WDAWADWADA</div>
+
+<div class="DBYD">ASDSADADWA</div>
+
+</body>
