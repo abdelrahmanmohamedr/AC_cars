@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 </head>
 
 <style>
@@ -14,7 +13,7 @@ body{
 header{
     height: 150px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
     background-color: white;
@@ -54,10 +53,6 @@ label::selection{
     background-color: white;
 }
 
-input[type = "checkbox"]:checked + label{
-    color: red;
-}
-
 .selection .DBMW,
 .selection .DMAR,
 .selection .DKIA,
@@ -93,6 +88,19 @@ input[class = "TOY"]:checked ~ div[class = "DTOY"]{
 }
 input[class = "BYD"]:checked ~ div[class = "DBYD"]{
     display: block;
+}
+ 
+input[class = "DARK"]:checked + header,  
+input[class = "DARK"]:checked ~ .section,  
+input[class = "DARK"]:checked ~ .section .selection,  
+input[class = "DARK"]:checked ~ .section .selection .DBMW,  
+input[class = "DARK"]:checked ~ .section .selection .DMAR,  
+input[class = "DARK"]:checked ~ .section .selection .DKIA,  
+input[class = "DARK"]:checked ~ .section .selection .DTOY,  
+input[class = "DARK"]:checked ~ .section .selection a,  
+input[class = "DARK"]:checked ~ .section .selection .DBYD{
+    background-color: rgb(33 31 31);
+    color: white;
 }
 
 p[class *=P]{
@@ -216,6 +224,7 @@ div [class*= MAIN]{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 60px;
     padding: 10px;
 }
 
@@ -249,14 +258,33 @@ label.BMW{
     
 }
 
+.img{
+    background-image: url(ac.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+}
+
+input[class = "DARK"]:checked + header .img{
+    background-image: url(ac2.jpg);
+}
+
 </style>
 
-<body>
-    <header>
-        <img src="ac.png" alt="logo">
-    </header>
 
-    <section>
+
+
+<body>
+    <div class="dark">
+        <input type="checkbox" class="DARK" id="CDARK" name="DARK">
+    <header>
+        <div class="img"></div>
+        <label for="CDARK" class="lDARK">DARK</label>
+    </header>
+    
+
+    <div class="section">
 
         <div class="mainp">
         <p>with <strong>AC</strong> website u can know the best cars for the last 5 years for many different car brands like BMW , marcedes , KIA , and many more. </p>
@@ -280,6 +308,8 @@ label.BMW{
     
     <input type="checkbox" class="BYD" value="BYD" name="BYD" id="BYD">
     <label for="BYD" class="BYD">BYD</label>
+    
+
         <hr>
 
     <div class="DBMW">
@@ -382,7 +412,7 @@ label.BMW{
             <div class="BMW_X1">
                 <h3 class="h32">BMW X1</h3>
                 <div class="BMW_X1_MAIN">
-                    <img class="BMW_X1img" src="https://th.bing.com/th/id/R.f71063c6a1693b34470e821f6244642d?rik=%2bpNyd8EVUJH3fg&pid=ImgRaw&r=0" alt="BMW X1">
+                    <img class="BMW_X1img" src="X1.jpg" alt="BMW X1">
                     <p class="BMW_X1p"> At a $35,000 starting price point, the X1 is the luxury SUV for those who want the BMW experience without the spaciousness of a larger SUV.
                      And it manages to fill this gap perfectly, 
                     currently sitting at the very top of the sub-compact luxury SUV segment. And it's been doing this since 2013.... <a href="">see more</a>
@@ -541,5 +571,7 @@ label.BMW{
 </div>
         
 
-    </section>
+</div>
+    </div>
 </body>
+
