@@ -73,19 +73,19 @@ label{
     margin-top: 10px;
 }
 
-input[class = "BMW"]:checked + div[class = "DBMW"]{
+input[class = "bmw"]:checked + div[class = "DBMW"]{
     display: block;
 }
-input[class = "MAR"]:checked + div[class = "DMAR"]{
+input[class = "mar"]:checked + div[class = "DMAR"]{
     display: block;
 }
-input[class = "NIS"]:checked + div[class = "DNIS"]{
+input[class = "nis"]:checked + div[class = "DNIS"]{
     display: block;
 }
-input[class = "TOY"]:checked + div[class = "DTOY"]{
+input[class = "toy"]:checked + div[class = "DTOY"]{
     display: block;
 }
-input[class = "POR"]:checked + div[class = "DPOR"]{
+input[class = "por"]:checked + div[class = "DPOR"]{
     display: block;
 }
  
@@ -233,7 +233,7 @@ div [class*= MAIN]{
     padding: 10px;
 }
 
-.selection img{
+.cars img{
     width: 48%;
     border: 0.1px solid transparent;
     border-radius: 30px;
@@ -277,6 +277,9 @@ body:has(input[class = "DARK"]:checked){
     margin-right: 30px;
 }
 
+#chkb:checked + label{
+    color: red;
+}
 
 
 
@@ -287,7 +290,7 @@ body:has(input[class = "DARK"]:checked){
 
 <body>
     <div class="dark">
-        <input type="checkbox" class="DARK" id="CDARK" name="DARK">
+        <input type="checkbox" class="DARK" id="CDARK" name="DARK" onclick="td()">
     <header>
         <div class="img"></div>
         <label for="CDARK" class="lDARK">DARK</label>
@@ -307,19 +310,19 @@ body:has(input[class = "DARK"]:checked){
 
             
     
-    <label for="BMW" class="BMW" id="lBMW">BMW</label>
+    <label for="BMW" class="BMW" id="lBMW" onclick=" colorB() " >BMW</label>
 
     
-    <label for="MAR" class="BMW" id="lMAR">MAR</label>
+    <label for="MAR" class="MAR" id="lMAR" onclick="colorM()" >MAR</label>
 
     
-    <label for="NIS" class="BMW" id="lNIS">NIS</label>
+    <label for="NIS" class="NIS" id="lNIS" onclick="colorN()" >NIS</label>
+    
+   
+    <label for="TOY" class="TOY" id="lTOY" onclick="colorT()">TOY</label>
     
     
-    <label for="TOY" class="BMW" id="lTOY">TOY</label>
-    
-    
-    <label for="POR" class="BMW" id="lPOR">POR</label>
+    <label for="POR" class="POR" id="lPOR" onclick="colorP()">POR</label>
             
     
         
@@ -328,7 +331,8 @@ body:has(input[class = "DARK"]:checked){
     <hr>
 
     <div class="cars">
-        <input type="checkbox" class="BMW" value="BMW" name="BMW" id="BMW">
+        <form action="">
+        <input type="checkbox" class="bmw" value="BMW" name="cr" id="BMW"  >
     <div class="DBMW">
 
         <h2>BMW</h2>
@@ -454,7 +458,7 @@ body:has(input[class = "DARK"]:checked){
             
         
         
-    <input type="checkbox" class="MAR" value="MAR" name="MAR" id="MAR">
+    <input type="checkbox" class="mar" value="MAR" name="cr" id="MAR" >
     <div class="DMAR">
         <h2>Mercedes</h2>
 
@@ -579,7 +583,7 @@ body:has(input[class = "DARK"]:checked){
         </div>
     </div>
 
-    <input type="checkbox" class="NIS" value="NIS" name="NIS" id="NIS">
+    <input type="checkbox" class="nis" value="NIS" name="cr" id="NIS" onclick="togglen()">
     <div class="DNIS">
 
         <h2>Nissan</h2>
@@ -708,7 +712,7 @@ body:has(input[class = "DARK"]:checked){
         </div>
 
     </div>
-    <input type="checkbox" class="TOY" value="TOY" name="TOY" id="TOY">
+    <input type="checkbox" class="toy" value="TOY" name="cr" id="TOY" onclick="togglet()">
     <div class="DTOY">
 
         <h2>Toyota</h2>
@@ -837,7 +841,7 @@ body:has(input[class = "DARK"]:checked){
             </div>
         </div>
     </div>
-    <input type="checkbox" class="POR" value="POR" name="POR" id="POR">
+    <input type="checkbox" class="por" value="POR" name="cr" id="POR" onclick="togglep()">
     <div class="DPOR">
 
     <h2>Porsche</h2>
@@ -962,70 +966,158 @@ body:has(input[class = "DARK"]:checked){
             </div>
         </div>
     </div>
+        </form>
 
 </div>
+
         
     </div>
 </div>
     </div>
 
-    <script>
+<script>
 
-const btn1 = document.getElementById('lBMW');
-const btn2 = document.getElementById('lMAR');
-const btn3 = document.getElementById('lTOY');
-const btn4 = document.getElementById('lNIS');
-const btn5 = document.getElementById('lPOR');
+document.getElementById("lBMW").style.color = "black"
+document.getElementById("lMAR").style.color = "black"
+document.getElementById("lNIS").style.color = "black"
+document.getElementById("lTOY").style.color = "black"
+document.getElementById("lPOR").style.color = "black"
+
+function colorB() {
+    if(document.getElementById("lBMW").style.color == "red"){
+    document.getElementById("lBMW").style.color = "black";
+    }else if(document.getElementById("lBMW").style.color === "black"){
+    document.getElementById("lBMW").style.color = "red";
+}
+    else if(document.getElementById("lBMW").style.color === "white"){
+    document.getElementById("lBMW").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lBMW").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lBMW").style.color = "white";
+}
+}
+function colorM() {
+    if(document.getElementById("lMAR").style.color == "red"){
+    document.getElementById("lMAR").style.color = "black";
+    }else if(document.getElementById("lMAR").style.color === "black"){
+    document.getElementById("lMAR").style.color = "red";
+}
+    else if(document.getElementById("lMAR").style.color === "white"){
+    document.getElementById("lMAR").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lMAR").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lMAR").style.color = "white";
+}
+}
+function colorT() {
+    if(document.getElementById("lTOY").style.color == "red"){
+    document.getElementById("lTOY").style.color = "black";
+    }else if(document.getElementById("lTOY").style.color === "black"){
+    document.getElementById("lTOY").style.color = "red";
+}
+    else if(document.getElementById("lTOY").style.color === "white"){
+    document.getElementById("lTOY").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lTOY").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lTOY").style.color = "white";
+}
+}
+function colorN() {
+    if(document.getElementById("lNIS").style.color == "red"){
+    document.getElementById("lNIS").style.color = "black";
+    }else if(document.getElementById("lNIS").style.color === "black"){
+    document.getElementById("lNIS").style.color = "red";
+}
+    else if(document.getElementById("lNIS").style.color === "white"){
+    document.getElementById("lNIS").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lNIS").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lNIS").style.color = "white";
+}
+}
+function colorP() {
+    if(document.getElementById("lPOR").style.color == "red"){
+    document.getElementById("lPOR").style.color = "black";
+    }else if(document.getElementById("lPOR").style.color === "black"){
+    document.getElementById("lPOR").style.color = "red";
+}
+    else if(document.getElementById("lPOR").style.color === "white"){
+    document.getElementById("lPOR").style.color = "rgb(247, 48, 48)";
+}
+    else if(document.getElementById("lPOR").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lPOR").style.color = "white";
+}
+}
+
+function td(){
+    if(document.getElementById("lBMW").style.color == "black"){
+    document.getElementById("lBMW").style.color = "white";
+    }else if(document.getElementById("lBMW").style.color === "white"){
+    document.getElementById("lBMW").style.color = "black";
+    }
+    else if(document.getElementById("lBMW").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lBMW").style.color = "red";
+    }
+    else if(document.getElementById("lBMW").style.color === "red"){
+    document.getElementById("lBMW").style.color = "rgb(247, 48, 48)";
+    }
+
+    if(document.getElementById("lMAR").style.color == "black"){
+    document.getElementById("lMAR").style.color = "white";
+    }else if(document.getElementById("lMAR").style.color === "white"){
+    document.getElementById("lMAR").style.color = "black";
+    }else if(document.getElementById("lMAR").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lMAR").style.color = "red";
+    }
+    else if(document.getElementById("lMAR").style.color === "red"){
+    document.getElementById("lMAR").style.color = "rgb(247, 48, 48)";
+    }
+
+    if(document.getElementById("lNIS").style.color == "black"){
+    document.getElementById("lNIS").style.color = "white";
+    }else if(document.getElementById("lNIS").style.color === "white"){
+    document.getElementById("lNIS").style.color = "black";
+    }else if(document.getElementById("lNIS").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lNIS").style.color = "red";
+    }
+    else if(document.getElementById("lNIS").style.color === "red"){
+    document.getElementById("lNIS").style.color = "rgb(247, 48, 48)";
+    }
 
 
-document.getElementById('lBMW').style.color = 'black';
-document.getElementById('lMAR').style.color = 'black';
-document.getElementById('lTOY').style.color = 'black';
-document.getElementById('lNIS').style.color = 'black';
-document.getElementById('lPOR').style.color = 'black';
+    if(document.getElementById("lTOY").style.color == "black"){
+    document.getElementById("lTOY").style.color = "white";
+    }else if(document.getElementById("lTOY").style.color === "white"){
+    document.getElementById("lTOY").style.color = "black";
+    }else if(document.getElementById("lTOY").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lTOY").style.color = "red";
+    }
+    else if(document.getElementById("lTOY").style.color === "red"){
+    document.getElementById("lTOY").style.color = "rgb(247, 48, 48)";
+    }
+
+    if(document.getElementById("lPOR").style.color == "black"){
+    document.getElementById("lPOR").style.color = "white";
+    }else if(document.getElementById("lPOR").style.color === "white"){
+    document.getElementById("lPOR").style.color = "black";
+    }else if(document.getElementById("lPOR").style.color === "rgb(247, 48, 48)"){
+    document.getElementById("lPOR").style.color = "red";
+    }
+    else if(document.getElementById("lPOR").style.color === "red"){
+    document.getElementById("lPOR").style.color = "rgb(247, 48, 48)";
+    }
+}
 
 
 
-btn1.addEventListener('click', function onClick(event) {
-  if (document.getElementById('lBMW').style.color === "black"){
-  event.target.style.color = 'red';
-  }else{
-    event.target.style.color = 'black';
-  }
-});
-btn2.addEventListener('click', function onClick(event) {
-  if (document.getElementById('lMAR').style.color === "black"){
-  event.target.style.color = 'red';
-  }else{
-    event.target.style.color = 'black';
-  }
-});
-btn3.addEventListener('click', function onClick(event) {
-  if (document.getElementById('lTOY').style.color === "black"){
-  event.target.style.color = 'red';
-  }else{
-    event.target.style.color = 'black';
-  }
-});
-btn4.addEventListener('click', function onClick(event) {
-  if (document.getElementById('lNIS').style.color === "black"){
-  event.target.style.color = 'red';
-  }else{
-    event.target.style.color = 'black';
-  }
-});
-btn5.addEventListener('click', function onClick(event) {
-  if (document.getElementById('lPOR').style.color === "black"){
-  event.target.style.color = 'red';
-  }else{
-    event.target.style.color = 'black';
-  }
-});
+
+     
+
+
 
 </script>
-     
-       
+
+
+
 </body>
 
-
-   
