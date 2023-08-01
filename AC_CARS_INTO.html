@@ -290,7 +290,7 @@ body:has(input[class = "DARK"]:checked){
 
 <body>
     <div class="dark">
-        <input type="checkbox" class="DARK" id="CDARK" name="DARK" onclick="td()">
+        <input type="checkbox" class="DARK" id="CDARK" name="DARK" onclick="td();  ">
     <header>
         <div class="img"></div>
         <label for="CDARK" class="lDARK">DARK</label>
@@ -310,19 +310,19 @@ body:has(input[class = "DARK"]:checked){
 
             
     
-    <label for="BMW" class="BMW" id="lBMW" onclick=" colorB() " >BMW</label>
+    <label  class="BMW" id="lBMW" onclick="colorB(); toggle(); " >BMW</label>
 
     
-    <label for="MAR" class="MAR" id="lMAR" onclick="colorM()" >MAR</label>
+    <label  class="MAR" id="lMAR" onclick="colorM(); togglem();" >Marcedes</label>
 
     
-    <label for="NIS" class="NIS" id="lNIS" onclick="colorN()" >NIS</label>
+    <label  class="NIS" id="lNIS" onclick="colorN(); togglen();" >Nissan</label>
     
    
-    <label for="TOY" class="TOY" id="lTOY" onclick="colorT()">TOY</label>
+    <label  class="TOY" id="lTOY" onclick="colorT(); togglet();">Toyota</label>
     
     
-    <label for="POR" class="POR" id="lPOR" onclick="colorP()">POR</label>
+    <label  class="POR" id="lPOR" onclick="colorP(); togglep();">Porsche</label>
             
     
         
@@ -332,7 +332,7 @@ body:has(input[class = "DARK"]:checked){
 
     <div class="cars">
         <form action="">
-        <input type="checkbox" class="bmw" value="BMW" name="cr" id="BMW"  >
+        <input type="radio" class="bmw" value="BMW" name="cr" id="BMW"  >
     <div class="DBMW">
 
         <h2>BMW</h2>
@@ -458,7 +458,7 @@ body:has(input[class = "DARK"]:checked){
             
         
         
-    <input type="checkbox" class="mar" value="MAR" name="cr" id="MAR" >
+    <input type="radio" class="mar" value="MAR" name="cr" id="MAR" >
     <div class="DMAR">
         <h2>Mercedes</h2>
 
@@ -583,7 +583,7 @@ body:has(input[class = "DARK"]:checked){
         </div>
     </div>
 
-    <input type="checkbox" class="nis" value="NIS" name="cr" id="NIS" onclick="togglen()">
+    <input type="radio" class="nis" value="NIS" name="cr" id="NIS" >
     <div class="DNIS">
 
         <h2>Nissan</h2>
@@ -712,7 +712,7 @@ body:has(input[class = "DARK"]:checked){
         </div>
 
     </div>
-    <input type="checkbox" class="toy" value="TOY" name="cr" id="TOY" onclick="togglet()">
+    <input type="radio" class="toy" value="TOY" name="cr" id="TOY" >
     <div class="DTOY">
 
         <h2>Toyota</h2>
@@ -841,7 +841,7 @@ body:has(input[class = "DARK"]:checked){
             </div>
         </div>
     </div>
-    <input type="checkbox" class="por" value="POR" name="cr" id="POR" onclick="togglep()">
+    <input type="radio" class="por" value="POR" name="cr" id="POR" >
     <div class="DPOR">
 
     <h2>Porsche</h2>
@@ -1109,9 +1109,93 @@ function td(){
 }
 
 
+var b1 = document.getElementById("BMW");
+var b2 = document.getElementById("MAR");
+var b3 = document.getElementById("TOY");
+var b4 = document.getElementById("NIS");
+var b5 = document.getElementById("POR");
 
 
-     
+   function toggle(){
+    if (document.getElementById("CDARK").checked === false){
+    b1.checked = !b1.checked;
+    document.getElementById("lMAR").style.color = "black";
+    document.getElementById("lNIS").style.color = "black";
+    document.getElementById("lTOY").style.color = "black";
+    document.getElementById("lPOR").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b1.checked = !b1.checked;
+    document.getElementById("lMAR").style.color = "white";
+    document.getElementById("lNIS").style.color = "white";
+    document.getElementById("lTOY").style.color = "white";
+    document.getElementById("lPOR").style.color = "white";
+   }
+}
+
+   function togglem(){
+    if (document.getElementById("CDARK").checked === false){
+    b2.checked = !b2.checked;
+    document.getElementById("lBMW").style.color = "black";
+    document.getElementById("lNIS").style.color = "black";
+    document.getElementById("lTOY").style.color = "black";
+    document.getElementById("lPOR").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b2.checked = !b2.checked;
+    document.getElementById("lBMW").style.color = "white";
+    document.getElementById("lNIS").style.color = "white";
+    document.getElementById("lTOY").style.color = "white";
+    document.getElementById("lPOR").style.color = "white";
+    }
+   }  
+
+   function togglet(){
+    if (document.getElementById("CDARK").checked === false){
+    b3.checked = !b3.checked;
+    document.getElementById("lMAR").style.color = "black";
+    document.getElementById("lNIS").style.color = "black";
+    document.getElementById("lBMW").style.color = "black";
+    document.getElementById("lPOR").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b3.checked = !b3.checked;
+    document.getElementById("lMAR").style.color = "white";
+    document.getElementById("lNIS").style.color = "white";
+    document.getElementById("lBMW").style.color = "white";
+    document.getElementById("lPOR").style.color = "white";
+    }
+   }  
+
+   function togglen(){
+    if (document.getElementById("CDARK").checked === false){
+    b4.checked = !b4.checked;
+    document.getElementById("lMAR").style.color = "black";
+    document.getElementById("lBMW").style.color = "black";
+    document.getElementById("lTOY").style.color = "black";
+    document.getElementById("lPOR").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b4.checked = !b4.checked;
+    document.getElementById("lMAR").style.color = "white";
+    document.getElementById("lBMW").style.color = "white";
+    document.getElementById("lTOY").style.color = "white";
+    document.getElementById("lPOR").style.color = "white";
+    }
+   }  
+
+   function togglep(){
+    if (document.getElementById("CDARK").checked === false){
+    b5.checked = !b5.checked;
+    document.getElementById("lMAR").style.color = "black";
+    document.getElementById("lNIS").style.color = "black";
+    document.getElementById("lTOY").style.color = "black";
+    document.getElementById("lBMW").style.color = "black";
+   } else if (document.getElementById("CDARK").checked === true){
+    b5.checked = !b5.checked;
+    document.getElementById("lMAR").style.color = "white";
+    document.getElementById("lNIS").style.color = "white";
+    document.getElementById("lTOY").style.color = "white";
+    document.getElementById("lBMW").style.color = "white";
+   }
+   }  
+   
 
 
 
