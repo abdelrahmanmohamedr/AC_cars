@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" type="image/x-icon" href="ac.png">
+
+    <title> AC cars 2020-Present Mercedes-Benz EQC </title>
+
+</head>
+
+<style>
+
+body{
+    background-color: #eee;
+}
+
+header{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    background-color: white;
+    margin: 0px;
+}
+
+input{
+    display: none;
+}
+
+label{
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+    padding: 3px;
+}
+
+label::selection{
+    background-color: white;
+}
+
+body:has(input[class = "DARK"]:checked){
+    background-color: black;
+}
+
+.img{
+    background-image: url(ac.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+}
+
+input[class = "DARK"]:checked + header,
+input[class = "DARK"]:checked ~ section{
+    background-color: rgb(33 31 31);
+    color: white;
+    border-color: white;
+}
+
+input[class = "DARK"]:checked + header .img{
+    background-image: url(ac2.jpg);
+}
+
+.lDARK{
+    margin-right: 30px;
+}
+
+h1{
+    font-size: 35px;
+    text-decoration: underline;
+    margin-left: 100px;
+    margin-bottom: 0px;
+
+}
+h2{
+    font-size: 33px;
+    text-decoration: underline;
+    margin-left: 3px;
+
+}
+
+.mainimg{
+    margin:0 auto;
+    position: relative;
+    width: 45%;
+    height: 350px;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    margin-bottom: 90px;
+}
+
+
+.out:checked ~ .mainimg {
+    transform: rotateY(180deg);
+
+}
+
+.out:checked ~ .mainimg .imgin .lin {
+    transform: rotateY(-180deg);
+}
+
+.mainimg .shape{
+ position: absolute;
+  height: 350px;
+}
+
+.imgout img{
+    height: 350px;
+    
+}
+
+.imgout{
+    z-index: 3;
+    backface-visibility: hidden;
+    position: relative;
+    width: 626.56px;
+    
+}
+
+.imgin{
+    position: relative;
+    width: 525px;
+}
+
+.imgin img{
+    height: 350px;
+    
+}
+
+.lrot{
+    width: 184px;
+    margin: 0px 622px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+p{
+    width: 70%;
+    font-size: 25px;
+    line-height: 32px;
+}
+.content{
+    margin-left: 100px;
+}
+
+.lin{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: white;
+    border: 1px white solid;
+    background-color: #1C5f8B;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin: 7px;
+}
+.lout{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: white;
+    border: 1px white solid;
+    background-color: #1C5f8B;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin: 7px;
+}
+
+.imgc1{
+    width: 70%;
+}
+
+.mainintro{
+    margin-bottom: 90px;
+}
+
+.Price{
+    margin-left: 100px;
+}
+
+.PriceP{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.content div {
+    margin-bottom: 50px;
+}
+
+.mainimg{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1000px){
+
+    p{
+        line-height: 37px ;
+        font-size: 27px;
+        word-spacing: 2px;
+    }
+
+    .out:checked ~ .mainimg {
+    transform: rotateY(180deg);
+
+    }
+
+    h2{
+        margin-right: 35px;
+    }
+
+    ul{
+        width: 70%;
+        font-size: 27px;
+    }
+
+    .lin,
+    .lout{
+        font-size: 1.4rem;
+    }
+   
+}
+
+
+
+</style>
+
+<body>
+    
+    <div class="dark">
+        <input type="checkbox" class="DARK" id="CDARK" name="DARK" >
+    <header>
+       <a class="img" href="AC_CARS_INTO.html"></a>
+        <label for="CDARK" class="lDARK">DARK</label>
+    </header>
+
+    <section>
+
+    <div class="main">
+
+         <div class="mainintro">
+            
+            <h1>
+                2019 Nissan GT-R 
+            </h1>
+
+           <p class="Price"> Starting at <span class="PriceP"> $101,785 </span>  </p>
+        
+        </div>
+
+        <div class="drot">
+
+        <input type="checkbox" name="out" id="out" class="out">
+
+        <input type="checkbox" name="in" id="in" class="in">
+
+        <div class="mainimg">
+
+            <div class="imgout shape">
+
+            <label for="out" class="lout">show interior</label>
+
+            <img src="https://hips.hearstapps.com/hmg-prod/images/2018-nissan-gt-r-track-103-1558454485.jpg?crop=0.947xw:0.866xh;0.0321xw,0.134xh&resize=2048:*" alt="BMW X7">
+
+            </div>
+        
+
+         <div class="imgin shape">
+
+            <label for="in" class="lin" onclick="reset()">show car</label>
+
+            <img src="https://th.bing.com/th/id/R.8224f38ef6fe1f04728974ecab73d97c?rik=g5XwbORjPrVaNw&pid=ImgRaw&r=0" alt="BMW X7 inside">
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        <div class="content">
+            
+            <div class="intro">
+
+                <h2>
+                    intro
+                </h2>
+
+                <p class="introp">
+                We had to wait until last year for BMW to unveil their answer to all those full-size SUVs such as the Audi Q7, Lincoln Navigator,
+                 or the G-Class. Yet, the X7 was definitely worth the wait, as the model now sits near the top of its segment, featuring some of the best luxury 
+                 features paired with a powerful engine.
+                 <br> <br>
+                As always, the X7 cabin reflects nothing but perfection.
+                 Wooden accents and leather cover the most visible areas, ensuring a comfortable, upscale experience for all 7 passengers. Meanwhile, 
+                 under the hood roars a frightening 523-horsepower V8 which, connected to all four wheels, makes the X7 a competent off-roader as well.
+                </p>
+
+            </div>
+
+            <div class="overview">
+
+                <h2>
+                    overview
+                </h2>
+
+                <p class="overviewp">
+                    Doesn't matter what you call it—GT-R or, as its fan lovingly refer to it, Godzilla—Nissan's range topper is a supercar-stomping, high-tech dynamo. 
+                    The 2019 GT-R has a high-performance heritage stretching back to the original Skyline GT-R from 1969. To celebrate the car's 50th anniversary, Nissan is making some tweaks to 
+                    the 2020 GT-R and adding a special edition model. 
+                    Nissan has also announced pricing for the 2020 GT-R; its base price has increased by nearly $14,000, to $115,235 for the Premium trim.
+
+              </p>
+
+            </div>
+
+
+            <div class="Engine, Transmission, and Performance">
+
+                <h2>
+                    Engine, Transmission, and Performance
+                </h2>
+
+                <p class="Engine,_Transmission,_and_Performancep">
+                   
+                    Its 3.8-liter twin-turbo V-6 makes a mighty 565 hp while a six-speed dual-clutch automatic transmission and all-wheel drive conspire to put all that power to the pavement.
+                     At our test track, the GT-R launched itself from zero to 60 mph in a mere 2.9 seconds, just 0.2 second behind the Porsche 911 Turbo S we tested. The 2019 Nissan GT-R's quick
+                      steering, rigid structure, and adjustable suspension can make even amateurs feel positively heroic from behind the wheel. Want more? Check out the track-ready NISMO-tuned 
+                      variant with 600 horsepower. The ride is firm but not punishing and, thanks to active sound cancellation, the thrum of the GT-R's engine doesn't punish your ear drums when 
+                      cruising on the highway.
+
+                </p>
+
+            </div>
+
+            <div class="Interior,_Comfort,_and_Cargo">
+
+                <h2>
+                    Interior, Comfort, and Cargo
+                </h2>
+
+                <p class="Interior,_Comfort,_and_Cargop">
+                    The front seats are plenty roomy but the rear seats are places only small children could find comfortable. The interior is nicely appointed and offers a host of standard 
+                    features, but those seeking a high-end interior such as those of the Audi R8 or the Mercedes-AMG GT will be disappointed. Leather-and-suede-covered seats are standard, as is
+                     an 8.0-inch touchscreen infotainment system with navigation and Apple CarPlay capability. You won't find any of Nissan's driver-assistance features here, but to be fair, those
+                      types of electronics aren't commonplace in most of the GT-R's rivals, either.
+
+
+                </p>
+
+            <img src="https://th.bing.com/th/id/R.fd9acfe7053c67112d3e8b1dd8834667?rik=GZ3ae%2bKPx%2fd0Cg&pid=ImgRaw&r=0" alt="" class="imgc1">
+
+            </div>
+
+        </div>
+
+    </section>
+    </div>
+
+<script>
+
+ var i = document.getElementById("in");
+ var o = document.getElementById("out");
+ console.log(i);
+ console.log(o);
+
+ i.checked = true;
+
+function reset() {
+ if (i.checked === true){
+    i.checked = false;
+    o.checked = false;
+ }
+}
+
+</script>
+
+</body>

@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" type="image/x-icon" href="ac.png">
+
+    <title> AC cars 2019 Toyota GR Supra </title>
+
+</head>
+
+<style>
+
+body{
+    background-color: #eee;
+}
+
+header{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    background-color: white;
+    margin: 0px;
+}
+
+input{
+    display: none;
+}
+
+label{
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+    padding: 3px;
+}
+
+label::selection{
+    background-color: white;
+}
+
+body:has(input[class = "DARK"]:checked){
+    background-color: black;
+}
+
+.img{
+    background-image: url(ac.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+}
+
+input[class = "DARK"]:checked + header,
+input[class = "DARK"]:checked ~ section{
+    background-color: rgb(33 31 31);
+    color: white;
+    border-color: white;
+}
+
+input[class = "DARK"]:checked + header .img{
+    background-image: url(ac2.jpg);
+}
+
+.lDARK{
+    margin-right: 30px;
+}
+
+h1{
+    font-size: 35px;
+    text-decoration: underline;
+    margin-left: 100px;
+    margin-bottom: 0px;
+
+}
+h2{
+    font-size: 33px;
+    text-decoration: underline;
+    margin-left: 3px;
+
+}
+
+.mainimg{
+    margin:0 auto;
+    position: relative;
+    width: 45%;
+    height: 350px;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    margin-bottom: 90px;
+}
+
+
+.out:checked ~ .mainimg {
+    transform: rotateY(180deg);
+
+}
+
+.out:checked ~ .mainimg .imgin .lin {
+    transform: rotateY(-180deg);
+}
+
+.mainimg .shape{
+ position: absolute;
+  height: 350px;
+}
+
+.imgout img{
+    height: 350px;
+    
+}
+
+.imgout{
+    z-index: 3;
+    backface-visibility: hidden;
+    position: relative;
+    width: 626.56px;
+    
+}
+
+.imgin{
+    position: relative;
+    width: 525px;
+}
+
+.imgin img{
+    height: 350px;
+    
+}
+
+.lrot{
+    width: 184px;
+    margin: 0px 622px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+p{
+    width: 70%;
+    font-size: 25px;
+    line-height: 32px;
+}
+.content{
+    margin-left: 100px;
+}
+
+.lin{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: white;
+    border: 1px white solid;
+    background-color: #1C5f8B;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin: 7px;
+}
+.lout{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: white;
+    border: 1px white solid;
+    background-color: #1C5f8B;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin: 7px;
+}
+
+.imgc1{
+    width: 70%;
+}
+
+.mainintro{
+    margin-bottom: 90px;
+}
+
+.Price{
+    margin-left: 100px;
+}
+
+.PriceP{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.content div {
+    margin-bottom: 50px;
+}
+
+.mainimg{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1000px){
+
+    p{
+        line-height: 37px ;
+        font-size: 27px;
+        word-spacing: 2px;
+    }
+
+    .out:checked ~ .mainimg {
+    transform: rotateY(180deg);
+
+    }
+
+    h2{
+        margin-right: 35px;
+    }
+
+    ul{
+        width: 70%;
+        font-size: 27px;
+    }
+
+    .lin,
+    .lout{
+        font-size: 1.4rem;
+    }
+   
+}
+
+
+
+</style>
+
+<body>
+    
+    <div class="dark">
+        <input type="checkbox" class="DARK" id="CDARK" name="DARK" >
+    <header>
+       <a class="img" href="AC_CARS_INTO.html"></a>
+        <label for="CDARK" class="lDARK">DARK</label>
+    </header>
+
+    <section>
+
+    <div class="main">
+
+         <div class="mainintro">
+            
+            <h1>
+                2019 Toyota GR Supra
+            </h1>
+
+           <p class="Price"> Starting at <span class="PriceP"> $45,540 </span>  </p>
+        
+        </div>
+
+        <div class="drot">
+
+        <input type="checkbox" name="out" id="out" class="out">
+
+        <input type="checkbox" name="in" id="in" class="in">
+
+        <div class="mainimg">
+
+            <div class="imgout shape">
+
+            <label for="out" class="lout">show interior</label>
+
+            <img src="https://hips.hearstapps.com/hmg-prod/images/2024-toyota-gr-supra-45th-anniversary-edition-106-648cadc57f6f0.jpg?crop=0.839xw:0.709xh;0.103xw,0.134xh&resize=2048:*" alt="BMW X7">
+
+            </div>
+        
+
+         <div class="imgin shape">
+
+            <label for="in" class="lin" onclick="reset()">show car</label>
+
+            <img src="https://www.largus.fr/images/images/2020-supra-launch-interior-01-acc26efec91d2bda85033757d4245ed526a9f7b6.jpg" alt="BMW X7 inside">
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        <div class="content">
+            
+            <div class="intro">
+
+                <h2>
+                    intro
+                </h2>
+
+                <p class="introp">
+                We had to wait until last year for BMW to unveil their answer to all those full-size SUVs such as the Audi Q7, Lincoln Navigator,
+                 or the G-Class. Yet, the X7 was definitely worth the wait, as the model now sits near the top of its segment, featuring some of the best luxury 
+                 features paired with a powerful engine.
+                 <br> <br>
+                As always, the X7 cabin reflects nothing but perfection.
+                 Wooden accents and leather cover the most visible areas, ensuring a comfortable, upscale experience for all 7 passengers. Meanwhile, 
+                 under the hood roars a frightening 523-horsepower V8 which, connected to all four wheels, makes the X7 a competent off-roader as well.
+                </p>
+
+            </div>
+
+            <div class="overview">
+
+                <h2>
+                    overview
+                </h2>
+
+                <p class="overviewp">
+                    While most of Toyota's lineup consists of consumer-grade sedans and SUVs, models marked with the initials GR represent the automaker's highest levels of performance, and chief
+                     among that subset is the 2024 GR Supra. While it's based on—and built alongside—the BMW Z4 convertible, the Supra brings an entirely different curb appeal. The two share most 
+                     everything else though, including 255-hp turbocharged four-cylinder and 382-hp turbocharged 3.0-liter six-cylinder engines. All Supra models are rear-wheel drive and you can 
+                     have either an eight-speed automatic or, as we prefer, a six-speed manual. The interior borrows heavily from the BMW parts bin—either a good or bad thing depending on who you 
+                     ask. But it comes with few compromises and there's plenty of space for two adults to get comfortable even on long drives. The Supra's sharp handling and responsive powertrains, 
+                     however, mean its happier nipping apexes than long highway slogs.
+
+
+              </p>
+
+            </div>
+
+
+            <div class="Engine, Transmission, and Performance">
+
+                <h2>
+                    Engine, Transmission, and Performance
+                </h2>
+
+                <p class="Engine,_Transmission,_and_Performancep">
+                   
+                    Before 2023, all Supra models came with an eight-speed automatic transmission and rear-wheel drive; last year, a six-speed manual finally became available, but only with the 
+                    optional turbocharged 3.0-liter inline-six. At the test track, our long-term 2020 GR Supra 3.0 (with the eight-speed automatic) laid down some seriously impressive acceleration 
+                    numbers, hitting 60 mph in 3.7 seconds and 100 mph in 9.5 ticks. With the six-speed manual, those figures increase slightly to 3.9 and 9.6 seconds, respectively. That puts it 
+                    in the big leagues against the Chevy Camaro SS, the Porsche Cayman GTS, and the BMW M2 Competition. In fact, it's even quicker than the vaunted fourth-generation Supra, which was
+                     powered by a sequentially turbocharged inline-six with 320 horsepower. Despite its performance potential, the GR Supra's suspension is forgiving enough to drive daily. Its
+                      steering is accurate, nicely weighted, and direct, which enhances its fun-to-drive personality. The lower-priced four-cylinder model delivered a brisk 4.7-second 60-mph run 
+                      at our test track. That's quicker than the GR Supra's German cousin—the BMW Z4—which managed a 5.0-second 60-mph time. The one negative we found with the performance of our 
+                      long-term GR Supra was the ease with which it got stuck in snow.
+
+
+                </p>
+
+            </div>
+
+            <div class="Fuel_Economy_and_Real-World MPG">
+
+                <h2>
+                    Fuel Economy and Real-World MPG
+                </h2>
+
+                <p class="Fuel_Economy_and_Real-World_MPGp">
+                    The most efficient GR Supra is the one with the turbocharged four-cylinder engine, which earns EPA ratings of 25 mpg city and 32 highway. The more powerful GR Supra 3.0's
+                     ratings are still pretty good at 23 mpg city and 31 highway for the automatic and 19 and 27 mpg for the 3.0 manual. That's more efficient than the Camaro, the Cayman GTS, 
+                     and the M2. On our 75-mph highway fuel-economy test route, the six-cylinder GR Supra exceeded its highway rating by delivering 34 mpg; with the turbo four, the GR Supra 
+                     delivered a stellar 38 mpg. For more information about the GR Supra's fuel economy,
+
+
+                </p>
+
+            </div>
+            <div class="Interior,_Comfort,_and_Cargo">
+
+                <h2>
+                    Interior, Comfort, and Cargo
+                </h2>
+
+                <p class="Interior,_Comfort,_and_Cargop">
+                    The driver-focused cockpit is tight, and although the double-bubble roof provides some additional headroom, the tallest drivers will feel pinched. Cargo space is similarly
+                    cramped, but the cargo area (accessed via a hatchback) is roomy enough for a couple of carry-on suitcases or about a week's worth of groceries for two. In our testing, we
+                     managed to fit four carry-on suitcases behind the rear seats. The Toyota shares much of its interior with the Z4, so those familiar with BMW switchgear and infotainment 
+                     controls will feel right at home.
+
+
+                </p>
+
+            <img src="https://hips.hearstapps.com/hmg-prod/images/2024-toyota-gr-supra-45th-anniversary-edition-115-648cadc7bcd6f.jpg?crop=1.00xw:0.919xh;0,0.0814xh&resize=980:*" alt="" class="imgc1">
+
+            </div>
+            <div class="Safety_and_Driver-Assistance_Features">
+
+                <h2>
+                    Safety and Driver-Assistance Features
+                </h2>
+
+                <p class="Safety_and_Driver-Assistance_Featuresp">
+                    Toyota offers a host of driver-assistance features as standard across the GR Supra lineup, including automated emergency braking. Additional features, such as adaptive cruise
+                     control and blind-spot monitoring, can be added via the optional Driver's Assist package. For more information about the GR Supra's crash-test results, visit the National 
+                     Highway Traffic Safety Administration (NHTSA) and Insurance Institute for Highway Safety (IIHS) websites. Key safety features include:
+
+
+                    <ul style="font-size: 25px; font-weight: bold;">
+                        <li>Standard automated emergency braking with pedestrian detection</li>
+                        <li>Standard lane-departure warning</li>
+                        <li>Standard automatic high-beams</li>
+                    </ul>
+                </p>
+
+            </div>
+            <div class="Warranty_and_Maintenance_Coverage">
+
+                <h2>
+                    Warranty and Maintenance Coverage
+                </h2>
+
+                <p class="Warranty_and_Maintenance_Coveragep">
+                    Although it shares much with the Z4, the GR Supra offers slightly longer powertrain coverage but falls behind the BMW with a shorter 
+                    limited warranty and complimentary scheduled maintenance plan.
+
+                    <ul style="font-size: 25px; font-weight: bold;">
+                        <li>Limited warranty covers three years or 36,000 miles</li>
+                        <li>Powertrain warranty covers five years or 60,000 miles</li>
+                        <li>Complimentary scheduled maintenance is covered for two years or 25,000 miles</li>
+                    </ul>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    </div>
+
+<script>
+
+ var i = document.getElementById("in");
+ var o = document.getElementById("out");
+ console.log(i);
+ console.log(o);
+
+ i.checked = true;
+
+function reset() {
+ if (i.checked === true){
+    i.checked = false;
+    o.checked = false;
+ }
+}
+
+</script>
+
+</body>
