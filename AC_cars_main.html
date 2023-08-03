@@ -93,7 +93,7 @@ h2{
 
 
 .out:checked ~ .mainimg {
-    transform: translateX(-20%) rotateY(180deg);
+    transform: rotateY(180deg);
 
 }
 
@@ -135,7 +135,7 @@ h2{
     margin-bottom: 3px;
 }
 
-p[class*=p]{
+p{
     width: 70%;
     font-size: 25px;
     line-height: 32px;
@@ -168,7 +168,7 @@ p[class*=p]{
 }
 
 .imgc1{
-    width: 1003px;
+    width: 70%;
 }
 
 .mainintro{
@@ -187,6 +187,37 @@ p[class*=p]{
 .content div {
     margin-bottom: 50px;
 }
+
+.mainimg{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1000px){
+
+    p{
+        line-height: 37px ;
+        font-size: 27px;
+        word-spacing: 2px;
+    }
+
+    .out:checked ~ .mainimg {
+    transform: rotateY(180deg);
+
+    }
+
+    h2{
+        margin-right: 35px;
+    }
+
+    ul{
+        width: 70%;
+        font-size: 27px;
+    }
+   
+}
+
+
 
 </style>
 
