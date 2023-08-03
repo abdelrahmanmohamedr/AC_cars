@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+
+    <link rel="icon" type="image/x-icon" href="ac.png">
+
+    <title> AC cars </title>
+
 </head>
 
 <style>
@@ -20,10 +25,6 @@ header{
     margin: 0px;
 }
 
-
-header img{
-    height: 100%;
-}
 
 .mainp{
     text-align: center;
@@ -88,7 +89,7 @@ input[class = "toy"]:checked + div[class = "DTOY"]{
 input[class = "por"]:checked + div[class = "DPOR"]{
     display: block;
 }
- 
+
 input[class = "DARK"]:checked ~ .section .selection label{
     color: white;
 } 
@@ -281,7 +282,18 @@ body:has(input[class = "DARK"]:checked){
     color: red;
 }
 
+p::selection{
+    color: white;
+    background-color: black;
+}
 
+input[class = "DARK"]:checked ~ p::selection,
+input[class = "DARK"]:checked ~ .section p::selection,
+input[class = "DARK"]:checked ~ .section .selection p::selection,
+input[class = "DARK"]:checked ~ .section .cars p::selection{
+    color: black;
+    background-color: white;
+}
 
 </style>
 
@@ -300,7 +312,7 @@ body:has(input[class = "DARK"]:checked){
     <div class="section">
 
         <div class="mainp">
-        <p>with <strong>AC</strong> website u can know the best cars for the last 5 years for many different car brands like BMW , marcedes , NIS , and many more. </p>
+        <p>with <strong>AC</strong> website u can know the best cars of the last decade for many different car brands like BMW , marcedes , NIS , and many more. </p>
         </div>
 
         <hr>
@@ -350,7 +362,7 @@ body:has(input[class = "DARK"]:checked){
                     <img class="BMW_X7img" src="https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2019/11/X7.jpg?q=50&fit=crop&w=750&dpr=1.5" alt="BMW X7">
                     <p class="BMW_X7p"> We had to wait until last year for BMW to unveil their answer to all those full-size SUVs such as the Audi Q7, Lincoln Navigator, or the G-Class. 
                         Yet, the X7 was definitely worth the wait, 
-                        as the model now sits near the top of its segment, featuring some of the best luxury features paired with a powerful engine... <a href="">see more</a>
+                        as the model now sits near the top of its segment, featuring some of the best luxury features paired with a powerful engine... <a href="AC_cars_main.html">see more</a>
                     </p>
                 </div>
             </div>
@@ -1114,6 +1126,7 @@ var b2 = document.getElementById("MAR");
 var b3 = document.getElementById("TOY");
 var b4 = document.getElementById("NIS");
 var b5 = document.getElementById("POR");
+
 
 
    function toggle(){
