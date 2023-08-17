@@ -56,6 +56,15 @@ body:has(input[class = "DARK"]:checked){
     height: 150px;
 }
 
+.ucimg{
+    background-image: url(uc.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 800px;
+    width: 907px;
+}
+
+
 input[class = "DARK"]:checked + header,
 input[class = "DARK"]:checked ~ section{
     background-color: rgb(33 31 31);
@@ -65,6 +74,12 @@ input[class = "DARK"]:checked ~ section{
 
 input[class = "DARK"]:checked + header .img{
     background-image: url(ac2.jpg);
+}
+
+input[class = "DARK"]:checked ~ section .ucd .ucimg{
+    background-image: url(ucd.jpg);
+    height: 1000px;
+    width: 1163px;
 }
 
 .lDARK{
@@ -85,9 +100,9 @@ section{
     align-content: center;
 }
 
-img{
-    height: 800px;
-}
+
+
+
 </style>
 
 <body>
@@ -101,9 +116,12 @@ img{
 
     <section>
 <div class="ucd">
-        <a href="AC_CARS_INTO.html"><img src="uc.jpg" alt="under construction"></a>
+        <a href="AC_CARS_INTO.html" class="ucimg"> </a>
+        
 <div>
     </section>
+
+    </div>
 
 </body>
 
