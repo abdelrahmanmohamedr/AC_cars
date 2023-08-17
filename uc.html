@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" type="image/x-icon" href="ac.png">
+
+    <title> AC cars  </title>
+
+</head>
+
+<style>
+
+body{
+    background-color: #eee;
+}
+
+header{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    background-color: white;
+    margin: 0px;
+}
+
+input{
+    display: none;
+}
+
+label{
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+    padding: 3px;
+}
+
+label::selection{
+    background-color: white;
+}
+
+body:has(input[class = "DARK"]:checked){
+    background-color: black;
+}
+
+.img{
+    background-image: url(ac.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+}
+
+input[class = "DARK"]:checked + header,
+input[class = "DARK"]:checked ~ section{
+    background-color: rgb(33 31 31);
+    color: white;
+    border-color: white;
+}
+
+input[class = "DARK"]:checked + header .img{
+    background-image: url(ac2.jpg);
+}
+
+.lDARK{
+    margin-right: 30px;
+}
+
+.ucd{
+
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+img{
+    height: 800px;
+}
+</style>
+
+<body>
+    
+    <div class="dark">
+        <input type="checkbox" class="DARK" id="CDARK" name="DARK" >
+    <header>
+       <a class="img" href="AC_CARS_INTO.html"></a>
+        <label for="CDARK" class="lDARK">DARK</label>
+    </header>
+
+    <section>
+<div class="ucd">
+        <a href="AC_CARS_INTO.html"><img src="uc.jpg" alt="under construction"></a>
+<div>
+    </section>
+
+</body>
+
+<script>
+
+</script>
