@@ -11,6 +11,7 @@
 
 <style>
 
+
 body{
     background-color: #eee;
     position: relative;
@@ -48,6 +49,7 @@ label{
     border-radius: 5px;
     box-shadow: 3px 3px black;
     padding: 3px;
+    caret-color: transparent;
 }
 
 label::selection{
@@ -308,6 +310,7 @@ color: white;
 font-weight: bold;
 cursor: pointer;
 font-size: 25px;
+caret-color: transparent;
 }
 
 .up:hover{
@@ -321,6 +324,14 @@ font-size: 25px;
     position: absolute;
     top: 0px;
 
+}
+
+@media (max-width : 1000px) {
+
+    .up{
+
+        font-size: 40px;
+    }
 }
 
 </style>
